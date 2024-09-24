@@ -12,6 +12,9 @@ import ProductDetails from '~/components/ProductDetails.vue';
 
         // fetch the product 
         const {data: product} = await useFetch(uri, {key: id});
+        if(!product.value){
+            throw createError({ statusCode: 404, statusMessage: 'Product Not Found', fatal: true})
+        }
 </script>
 
 <style lang="scss" scoped>
