@@ -17,5 +17,8 @@ import ProductCards from '~/components/ProductCards.vue';
     layout: 'products'
   })
   const {data: products } = await useFetch('https://api.escuelajs.co/api/v1/products');
+  useHead({
+    title: 'Nuxt Js | Nerch'
+  })
 
 </script>
